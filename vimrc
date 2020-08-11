@@ -23,6 +23,8 @@ endtry
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" ----- Essentials(?) -------------------------------------------------
+Plugin 'tpope/vim-fugitive'
 " ----- Making Vim look good ------------------------------------------
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
@@ -31,7 +33,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 " ----- Other text editing features -----------------------------------
 Plugin 'Raimondi/delimitMate'
-
+" ----- other... ------------------------------------------------------
 Plugin 'benmills/vimux'
 Plugin 'jez/vim-better-sml'
 
