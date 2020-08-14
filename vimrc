@@ -81,10 +81,15 @@ autocmd GUIEnter * set visualbell t_vb= " OMG I hate bells
 
 set list                   " Show non-printable characters.
 if has('multi_byte') && &encoding ==# 'utf-8'
-  let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+  let &listchars = 'tab:▸ ,nbsp:␣,trail:·,extends:→,precedes:←'
+  " --- eol:↲
 else
   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
+
+hi NonText    ctermfg=16 guifg=#4a4a59
+hi SpecialKey ctermfg=16 guifg=#4a4a59
+
 
 " The fish shell is not very compatible to other shells and unexpectedly
 " breaks things that use 'shell'.
@@ -107,7 +112,10 @@ set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 " Clear the screen and more
 nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 
-set mouse=a
+if has('mouse')
+  set mouse=a
+endif
+
 set ignorecase
 
 " ----- Plugin-Specific Settings --------------------------------------
@@ -123,9 +131,8 @@ endif
 " Toggle this to "light" for light colorscheme
 set background=dark
 " Set the colorscheme
+let g:solarized_termtrans=1
 colorscheme solarized
-
-
 
 " ----- bling/vim-airline settings -----
 " Always show statusbar
@@ -145,7 +152,13 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_theme='solarized'
 
+
 set guifont=Menlo\ for\ Powerline
+
+" ----- Matt's stuff -----
+cmap w!! w !sudo /usr/bin/tee > /dev/null %
+map ,bt :bufdo tab split<CR>
+set pastetoggle=<F3>
 
 " ----- scrooloose/syntastic settings -----
 let g:syntastic_error_symbol = '✘'
