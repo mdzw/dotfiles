@@ -12,5 +12,5 @@ palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', '
 use-system-font=false
 use-theme-colors=false
 use-theme-transparency=false
-use-transparent-background=false
+use-transparent-background=true
 visible-name='Blargh'
