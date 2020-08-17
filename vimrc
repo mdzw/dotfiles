@@ -160,6 +160,10 @@ cmap w!! w !sudo /usr/bin/tee > /dev/null %
 map ,bt :bufdo tab split<CR>
 set pastetoggle=<F3>
 
+" --- Toggle display of non-printable characters
+nnoremap <F2> :set list! list?<CR>
+inoremap <F2> <C-o>:set list!<CR>
+
 " ----- scrooloose/syntastic settings -----
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
