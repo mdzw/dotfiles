@@ -6,7 +6,7 @@ sudo apt-get install tree tmux vlc build-essential \
  keepass2 python-is-python3 baobab
 
 # Pretty font, used in vim and gnome-terminal settings
-mkdir ~/.fonts
+mkdir ~/.fonts 2>/dev/null
 wget https://github.com/abertsch/Menlo-for-Powerline/archive/master.zip
 unzip -j master.zip "*.ttf" -d ~/.fonts
 fc-cache -vf ~/.fonts
@@ -29,6 +29,6 @@ sudo dpkg-reconfigure libdvd-pkg
 
 # DO THIS LAST: Set up vimrc, bootstrap Vundle
 # (The Vundle bootstrap doesn't seem to quit Vim successfully..)
-mkdir ~/.vim
+mkdir ~/.vim 2>/dev/null
 cp vimrc ~/.vim/
 vim
