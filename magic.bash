@@ -2,7 +2,7 @@
 
 #Packages I tend to use
 sudo apt-get install tree tmux vlc build-essential \
- vim git libdvdcss2 gnome-tweaks ssh python3-gpg \
+ vim-command-t git libdvdcss2 gnome-tweaks ssh python3-gpg \
  keepass2 python-is-python3 baobab
 
 # Pretty font, used in vim and gnome-terminal settings
