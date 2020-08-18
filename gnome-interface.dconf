@@ -1,3 +1,4 @@
 [/]
 clock-format='12h'
 clock-show-weekday=true
+monospace-font-name='Menlo for Powerline 11'
